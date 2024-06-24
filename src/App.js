@@ -7,6 +7,8 @@ import history from './history'
 import Layouts from './layouts'
 import { THEME_CONFIG } from './configs/AppConfig';
 import './lang'
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 // import mockServer from './mock'
 
 const themes = {
@@ -31,6 +33,7 @@ function App() {
             insertionPoint="styles-insertion-point"
           >
             <Layouts />
+            <SpeedInsights />
           </ThemeSwitcherProvider>
         </BrowserRouter>  
       </Provider>
