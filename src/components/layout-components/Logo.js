@@ -58,15 +58,15 @@ export const Logo = ({ mobileLogo, logoType }) => {
 	const getLogo = () => {
 		if(logoType === 'light') {
 			if(navCollapsed) {
-			return '/img/logo-sm-white.png'
+			return '/img/BIX-clone-logo-small.png'
 			}
-			return '/img/logo-white.png'
+			return '/img/BIX-clone-logo-large.png'
 		}
 	
 		if (navCollapsed) {
-			return '/img/cvent-logo-small.png'
+			return '/img/BIX-clone-logo-small.png'
 		}
-		return '/img/cvent-logo-large.png'
+		return '/img/BIX-clone-logo-large.png'
 	}
 
 	return (

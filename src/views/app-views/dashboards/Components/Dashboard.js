@@ -42,6 +42,12 @@ const Dashboard = () => {
         console.log(key);
       };
 
+    const handleActionClick = (key) => {
+    // Navigate to '/customer' or any other desired route
+    navigate('/products');
+    console.log(key);
+    };  
+
     return (
         <div>
             <Header title="Dashboard" />
@@ -91,6 +97,7 @@ const Dashboard = () => {
                                 }
                                 // bordered={false}
                                 key={index}
+                                onClick={() => handleActionClick(key)}
                             >
                                 <div className="custom-card-icon">{React.cloneElement(ActionMapping[key].icon, { style: { color: ActionMapping[key].color } })}</div>
                             </Card>

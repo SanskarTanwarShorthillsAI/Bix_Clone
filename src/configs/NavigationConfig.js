@@ -28,7 +28,18 @@ const dashBoardNavTree = [
   icon:  UserOutlined,
   breadcrumb: false,
   submenu: []
-}]
+}
+,
+{
+  key: 'product',
+  path: `/products`,
+  title: 'Product',
+  icon:  UserOutlined,
+  breadcrumb: false,
+  submenu: []
+}
+
+]
 
 const navigationConfig = [
   ...dashBoardNavTree

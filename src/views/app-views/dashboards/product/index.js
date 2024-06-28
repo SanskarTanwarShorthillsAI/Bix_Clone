@@ -1,10 +1,10 @@
 import React from 'react'
-import Customer from '../Components/Customers'
+import Product from '../Components/Products.js'
 
 const index = () => {
   return (
     <div>
-      <Customer/>
+      <Product />
     </div>
   )
 }

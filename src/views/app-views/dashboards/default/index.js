@@ -45,9 +45,7 @@ export const DefaultDashboard = () => {
   
   return (
     <div className={`App`}>
-        
         <Dashboard />
-        
     </div>
   )
 }
