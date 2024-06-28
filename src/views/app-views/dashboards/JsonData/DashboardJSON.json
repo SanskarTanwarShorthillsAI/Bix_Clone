@@ -1,0 +1,19 @@
+{
+ 
+    "dashboard_data" : {
+        "monthly_total_collection" : 40808,
+        "today_collection" : 600,
+        "total_pending_amount" : 186774,
+        "monthly_online_collection" :9408,
+        "today_renewals" : 0,
+        "upcoming_renewals" : 291,
+        "expired_renewals" : 4,
+        "recharged":111016,
+        "total_customers" : 407,
+        "active_customers" : 295,
+        "inactive_customers" : 112,
+        "current_month_new_customers" : 0,
+        "total_pending_complaints" : 1,
+        "today_followup_customers" : 1
+    }
+}

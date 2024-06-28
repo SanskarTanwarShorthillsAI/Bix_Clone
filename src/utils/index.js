@@ -16,21 +16,44 @@ class Utils {
 	 * @param {String} path - Location path you looking for e.g '/app/dashboards/analytic'
 	 * @return {Object} object that contained the path string
 	 */
+	// static getRouteInfo(navTree, path) {
+	// 	if( navTree.path === path ){
+	// 	  	return navTree;
+	// 	}
+	// 	let route; 
+	// 	console.log("navTree", navTree);
+	// 	console.log("path", path);
+	// 	for (let p in navTree) {
+	// 		if( navTree.hasOwnProperty(p) && typeof navTree[p] === 'object' ) {
+	// 			route = this.getRouteInfo(navTree[p], path);
+	// 			if(route){
+	// 				return route;
+	// 			}
+	// 		}
+	// 	}
+	// 	return route;
+	// }	
 	static getRouteInfo(navTree, path) {
-		if( navTree.path === path ){
-		  	return navTree;
-		}
-		let route; 
-		for (let p in navTree) {
-			if( navTree.hasOwnProperty(p) && typeof navTree[p] === 'object' ) {
-				route = this.getRouteInfo(navTree[p], path);
-				if(route){
-					return route;
-				}
-			}
-		}
-		return route;
-	}	
+        if( navTree.path === path ){
+            return navTree;
+        }
+        
+        // Anuj Maurya added this.
+        // if(navTree.path && path.indexOf(navTree.path) == 0){
+        //     return navTree;
+        // }
+ 
+        let route;
+        for (let p in navTree) {
+            if( navTree.hasOwnProperty(p) && typeof navTree[p] === 'object' ) {
+                route = this.getRouteInfo(navTree[p], path);
+                if(route){
+                    return route;
+                }
+            }
+        }
+        return route;
+    }   
 
 	/**
 	 * Get accessible color contrast

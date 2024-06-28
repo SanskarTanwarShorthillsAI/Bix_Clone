@@ -73,15 +73,26 @@ const SideNavContent = (props) => {
 	const menuItems = useMemo(() => getSideNavMenuItem(navigationConfig), []);
 
 	return (
+		// <Menu
+		// 	mode="inline"
+		// 	theme={sideNavTheme === SIDE_NAV_LIGHT ? "light" : "dark"}
+		// 	style={{ height: "100%", borderInlineEnd: 0 }}
+		// 	defaultSelectedKeys={[routeInfo?.key]}
+		// 	defaultOpenKeys={setDefaultOpen(routeInfo?.key)}
+		// 	className={hideGroupTitle ? "hide-group-title" : ""}
+		// 	items={menuItems}
+		// />
 		<Menu
-			mode="inline"
-			theme={sideNavTheme === SIDE_NAV_LIGHT ? "light" : "dark"}
-			style={{ height: "100%", borderInlineEnd: 0 }}
-			defaultSelectedKeys={[routeInfo?.key]}
-			defaultOpenKeys={setDefaultOpen(routeInfo?.key)}
-			className={hideGroupTitle ? "hide-group-title" : ""}
-			items={menuItems}
-		/>
+                mode="inline"
+                theme={sideNavTheme === SIDE_NAV_LIGHT ? "light" : "dark"}
+                style={{ height: "100%", borderInlineEnd: 0 }}
+                defaultSelectedKeys={[routeInfo?.key]}
+                selectedKeys={[routeInfo?.key]}
+                defaultOpenKeys={setDefaultOpen(routeInfo?.key)}
+                className={hideGroupTitle ? "hide-group-title" : ""}
+                // openKeys={[]}
+                items={menuItems}
+            />
 	);
 };
 

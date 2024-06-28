@@ -21,8 +21,13 @@ export const publicRoutes = [
 
 export const protectedRoutes = [
     {
-        key: 'dashboard.default',
-        path: `${APP_PREFIX_PATH}/dashboards/default`,
+        key: 'dashboard',
+        path: `${APP_PREFIX_PATH}/dashboard`,
         component: React.lazy(() => import('views/app-views/dashboards/default')),
+    },
+    {
+        key: 'customer',
+        path: `/customer`,
+        component: React.lazy(() => import('views/app-views/dashboards/customer')),
     }
 ]
